@@ -17,7 +17,7 @@ export default function Product() {
 
   useEffect(() => {
     const fetchProduct = async () => {
-      const result= fetch(`http://localhost:5000/items/product/${id}`)
+      const result= fetch(`https://e-commerce-server-hhpk.onrender.com/items/product/${id}`)
   .then(response => response.json())
   .then(data => {
     // handle the response data
