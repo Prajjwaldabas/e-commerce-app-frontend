@@ -2,9 +2,9 @@ import React from 'react'
 
 import { useState} from "react"
 
-export default function ItemFrom() {
-    const [isPopupOpen, setIsPopupOpen] = useState(false);
-    
+export default function ItemFrom({ onClosePopup }) {
+ 
+ 
     const [name, setName] = useState('');
     const [price, setPrice] = useState('');
     const [description, setDescription] = useState('');
@@ -28,19 +28,18 @@ export default function ItemFrom() {
           .then(response => response.json())
           .then(result => {
             console.log(result);
-            setIsPopupOpen(false);
+            onClosePopup(); // call callback function to close the popup
+            console.log("items created")
+            console.log("handle submit clicked")
           })
           .catch(error => console.error(error));
       };
 
-      const cancelEdit=(event)=>{
-       
-        event.preventDefault();
-        setIsPopupOpen(false);
-        console.log("cancel button clicked")
-       
-        
+      const cancelEdit=()=>{
+        console.log("edit button clicked")
+        onClosePopup(); // call callback function to close the popup
       }
+    
     
   return (
    
@@ -63,8 +62,8 @@ export default function ItemFrom() {
         </label>
         <button type='submit'>Add Product </button>
         <button className='cancel_btn' onClick={cancelEdit}>X</button>
-
          </form>
+
         </div>
     
         

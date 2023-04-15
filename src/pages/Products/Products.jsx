@@ -17,7 +17,9 @@ export default function Products() {
   const [maxPrice,setMaxPrice]=useState(1000);
   const [sort,setSort]=useState(null)
   
- 
+  const handleTogglePopup = () => {
+    setIsPopupOpen(!isPopupOpen);
+  }
 
 
   return (
@@ -62,14 +64,15 @@ export default function Products() {
   </div>
 </div>
 <div className="right">
-<button onClick={() => setIsPopupOpen(true)} className="addNew">Add New Product +</button>
+<button onClick={handleTogglePopup} className="addNew">Add New Product +</button>
  
 
-{isPopupOpen ? < ItemForm/> : null}
+{isPopupOpen ? < ItemForm onClosePopup={handleTogglePopup}/> : null}
+
 
   <img className="catImg" src="https://images.pexels.com/photos/1074535/pexels-photo-1074535.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
 
-  <List catId={catId}  maxPrice={maxPrice} sort={sort}/>
+  <List catId={catId}  maxPrice={maxPrice} sort={sort} />
 </div>
 
     </div>

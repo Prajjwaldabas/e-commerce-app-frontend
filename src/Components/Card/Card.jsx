@@ -45,7 +45,7 @@ export default function Card({item}) {
   const result = await response.json();
   console.log("updatedItem",result);
   setSelectedItem(null);
-  window.location.reload();
+  // window.location.reload();
   console.log("edit button clicked")
   }
 
@@ -72,10 +72,12 @@ export default function Card({item}) {
    <button className="addcart" >
 <AddShoppingCartIcon/>
        </button>
+
        <button className="edititem" onClick={(event) => setSelectedItem(item,event)}
 > 
 <EditIcon/>
        </button>
+
      <button className="deleteitem" onClick={(event) => deleteItem(item._id,event)}> 
 <DeleteIcon/>
        </button> 
