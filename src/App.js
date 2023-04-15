@@ -34,11 +34,11 @@ const router = createBrowserRouter([
         element:<Home/>
       },
       {
-        path:"/products/:id",
+        path:"https://e-commerce-app-q0tc.onrender.com/products/:id",
         element:<Products/>
       },
       {
-        path:"/product/:id",
+        path:"https://e-commerce-app-q0tc.onrender.com/product/:id",
         element:<Product/>
       },
 

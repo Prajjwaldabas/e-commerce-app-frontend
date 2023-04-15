@@ -13,7 +13,7 @@ export default function ItemFrom() {
 
     const handleSubmit= async(event)=> {
    
-        fetch('http://localhost:5000/items/create', {
+        fetch('https://e-commerce-server-hhpk.onrender.com/items/create', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'
@@ -34,8 +34,11 @@ export default function ItemFrom() {
       };
 
       const cancelEdit=(event)=>{
-        
+       
+        event.preventDefault();
         setIsPopupOpen(false);
+        console.log("cancel button clicked")
+       
         
       }
     

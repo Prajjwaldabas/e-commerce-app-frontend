@@ -14,9 +14,9 @@ export default function Card({item}) {
 
 
   const deleteItem = async (id,event) => {
-   event.preventDefault()
+  //  event.preventDefault()
     try {
-      const response = await fetch(`http://localhost:5000/items/delete/${id}`, {
+      const response = await fetch(`https://e-commerce-server-hhpk.onrender.com/items/delete/${id}`, {
         method: "DELETE",
       });
       const data = await response.json();
@@ -35,7 +35,7 @@ export default function Card({item}) {
     // event.preventDefault();
     
 
-     const response = await fetch(`http://localhost:5000/items/update/${item._id}`, {
+     const response = await fetch(`https://e-commerce-server-hhpk.onrender.com/items/update/${item._id}`, {
     method: 'PUT',
     headers: {
       'Content-Type': 'application/json'
