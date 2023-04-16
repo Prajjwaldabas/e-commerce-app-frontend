@@ -9,6 +9,7 @@ export default function ItemFrom({ onClosePopup }) {
     const [price, setPrice] = useState('');
     const [description, setDescription] = useState('');
     const [imageUrl, setImageUrl] = useState('');
+    const [category, setCategory] = useState('');
 
 
     const handleSubmit= async(event)=> {
@@ -59,6 +60,9 @@ export default function ItemFrom({ onClosePopup }) {
         </label>
         <label htmlFor="Image">    ImageUrl:
           <input type="text" value={imageUrl} name='imageUrl' onChange={event => setImageUrl(event.target.value)}/>
+        </label>
+        <label htmlFor="Image">    Category:
+          <input type="text" value={category} name='category' onChange={event => setCategory(event.target.value)}/>
         </label>
         <button type='submit'>Add Product </button>
         <button className='cancel_btn' onClick={cancelEdit}>X</button>

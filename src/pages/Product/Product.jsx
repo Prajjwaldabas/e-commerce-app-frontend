@@ -4,15 +4,30 @@ import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import BalanceIcon from '@mui/icons-material/Balance';
 import { useEffect } from "react";
-import { useParams } from "react-router-dom";
 
+import Loader from "../../Components/Loader/Loader";
+
+// import useFetch from "../../hooks/useFetch";
+import { useParams } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { addToCart } from "../../redux/cartReducer";
 
 import { useState } from "react";
 export default function Product() {
-  const [selsectedImg, setSelectedImg] = useState(0);
+
+  const [Loading,setLoading] = useState(true)
+  const id = useParams().id;
+  const [selectedImg, setSelectedImg] = useState("img");
   const [quantity, setquantity] = useState(1);
 
-  const { id } = useParams();
+  const dispatch = useDispatch();
+  // const { data, loading, error } = useFetch(`/products/${id}?populate=*`);
+
+
+  // const [selsectedImg, setSelectedImg] = useState(0);
+ 
+
+ 
   const [product, setProduct] = useState({});
 
   useEffect(() => {
@@ -23,6 +38,7 @@ export default function Product() {
     // handle the response data
     setProduct(data);
     console.log(data);
+    setLoading(false)
     
   })
   .catch(error => {
@@ -34,7 +50,9 @@ export default function Product() {
   }, [id])
 
 
-  
+  if (Loading) {
+    return <Loader />;
+  }
 
   // const images = [
   //   "https://images.pexels.com/photos/9558240/pexels-photo-9558240.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
@@ -57,13 +75,10 @@ export default function Product() {
 
       <div className="right">
 
-        <h1>Title</h1>
-        <span className="price">$199</span>
+        <h1>{product.name}</h1>
+        <span className="price">{product.price}</span>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
-          magni ullam amet consequatur pariatur, culpa, esse tempora
-          consequuntur harum rem architecto temporibus odio debitis nihil vitae
-          commodi quia obcaecati eum?
+         {product.description}
         </p>
 
         <div className="quantity">
@@ -72,7 +87,19 @@ export default function Product() {
             <button onClick={()=>setquantity(prev=>prev+1)}>+</button>
 
         </div>
-        <button className="add">
+        <button className="add"   onClick={() =>
+                dispatch(
+                  addToCart({
+                    key:product.key,
+                    id: product._id,
+                    name: product.name,
+                    description: product.description,
+                    price: product.price,
+                    img: product.imageUrl,
+                    quantity,
+                  })
+                )
+              }>
         <AddShoppingCartIcon/>ADD TO CART
         </button>
         <div className="links">

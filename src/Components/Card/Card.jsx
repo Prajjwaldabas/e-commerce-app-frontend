@@ -56,12 +56,32 @@ export default function Card({item}) {
   return (
     <div className='CardWrap'>
 {selectedItem && (
+  
   <form >
     <h2>Edit Product</h2>
+   
+          
+      
+     <label htmlFor="Name">Product Name:
     <input type="text" value={selectedItem.name} onChange={(e) => setSelectedItem({ ...selectedItem, name: e.target.value })} />
+    </label>
+
+    <label htmlFor="Name">Price:
     <input type="text" value={selectedItem.price} onChange={(e) => setSelectedItem({ ...selectedItem, price: e.target.value })} />
+    </label>
+
+    <label htmlFor="Name">Description:
     <input type="text" value={selectedItem.description} onChange={(e) => setSelectedItem({ ...selectedItem, description: e.target.value })} />
+    </label>
+
+    <label htmlFor="Name">Image URL:
     <input type="text" value={selectedItem.imageUrl} onChange={(e) => setSelectedItem({ ...selectedItem, imageUrl: e.target.value })} />
+    </label>
+
+    <label htmlFor="Name">Category:
+    <input type="text" value={selectedItem.category} onChange={(e) => setSelectedItem({ ...selectedItem, category: e.target.value })} />
+    </label>
+
     <button type="submit" onClick={handleEdit}>Save</button>
     <button className='cancel_btn' onClick={cancelEdit}>X</button>
   </form>
@@ -69,7 +89,7 @@ export default function Card({item}) {
 
 <div className="additems">
    
-   <button className="addcart" >
+   <button className="addcart"  >
 <AddShoppingCartIcon/>
        </button>
 

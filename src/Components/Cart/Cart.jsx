@@ -1,60 +1,71 @@
-import React from 'react'
-import "./Cart.scss"
-import DeleteIcon from '@mui/icons-material/Delete';
+import React from "react";
+import "./Cart.scss";
+import DeleteOutlinedIcon from "@mui/icons-material/DeleteOutlined";
+import { useSelector } from "react-redux";
+import { removeItem, resetCart } from "../../redux/cartReducer";
+import { useDispatch } from "react-redux";
 
-export default function Cart() {
-    const data=[
-        {
-            id: 3,
-            title: "Coat",
-            price: 15.99,
-            oldPrice:19,
-            description:
-              "Women's clothing",
-            category: "Women's clothing",
-            img: "https://images.pexels.com/photos/1457983/pexels-photo-1457983.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-            rating: { rate: 2.1, count: 430 },
-          }, {
-            id: 2,
-            title: "T-shirt",
-            oldPrice:23,
-            price: 55.99,
-            isNew:true,
-            description:
-              "outerwear jackets",
-            category: "men's clothing",
-            img: "https://images.pexels.com/photos/1759622/pexels-photo-1759622.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-            rating: { rate: 4.7, count: 500 },
-          },
-    ]
+
+const Cart = () => {
+  const products = useSelector((state) => state.cart.products);
+  const dispatch = useDispatch();
+
+  const totalPrice = () => {
+    let total = 0;
+    products.forEach((item) => {
+      total += item.quantity * item.price;
+    });
+    return total.toFixed(2);
+  };
+
+  // const stripePromise = loadStripe(
+  //   "pk_test_eOTMlr8usx1ctymXqrik0ls700lQCsX2UB"
+  // );
+  // const handlePayment = async () => {
+  //   try {
+  //     const stripe = await stripePromise;
+  //     const res = await makeRequest.post("/orders", {
+  //       products,
+  //     });
+  //     await stripe.redirectToCheckout({
+  //       sessionId: res.data.stripeSession.id,
+  //     });
+
+  //   } catch (err) {
+  //     console.log(err);
+  //   }
+  // };
   return (
-    <div className='cart'>
-     <h1>Products in your cart</h1>
-     {data?.map(item=>(
+    <div className="cart">
+      <h1>Products in your cart</h1>
+      {products?.map((item) => (
+        
         <div className="item" key={item.id}>
-            <img src={item.img} alt="" />
-            <div className="details">
-                <h1>
-                    {item.title}
-                </h1>
-                <p> {item.description?.substring(0,100)}</p>
-                <div className="price">
-                    1 X ${item.price}
-                </div>
+          <img src={ item.img} alt="" />
+          <div className="details">
+            <h1>{item.name}</h1>
+            <p>{item.description?.substring(0,30)}</p>
+            <div className="price">
+              {item.quantity} x ${item.price}
             </div>
-            <DeleteIcon className='delete'/>
+          </div>
+          <DeleteOutlinedIcon
+            className="delete"
+            onClick={() => dispatch(removeItem(item.id))}
+          />
         </div>
-     ))}
-     <div className="total">
+      ))}
+     {console.log(products)}
+      <div className="total">
         <span>SUBTOTAL</span>
-        <span>$123</span>
-     </div>
-     <button>PROCEED TO CHECKOUT</button>
-     <span className='reset'>Reset
-     
-     </span>
-
-
+        <span>${totalPrice()}</span>
+      </div>
+      {/* <button onClick={handlePayment}>PROCEED TO CHECKOUT</button> */}
+      <span className="reset" onClick={() => dispatch(resetCart())}>
+        Reset Cart
+      </span>
     </div>
-  )
-}
+  );
+};
+
+export default Cart;
