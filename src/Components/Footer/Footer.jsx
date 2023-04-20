@@ -50,9 +50,9 @@ My Store
 </span>
 </div>
 
-<div className='right'>
+{/* <div className='right'>
 <img src="https://www.pngitem.com/pimgs/m/291-2918799_stripe-payment-icon-png-transparent-png.png" alt="" width="550px" height="50px"/>
-</div>
+</div> */}
 
 </div>
 

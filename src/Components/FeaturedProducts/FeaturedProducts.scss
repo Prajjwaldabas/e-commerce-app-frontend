@@ -9,7 +9,8 @@
     }
 
     h1{
-        flex: 2;
+        flex: 2 1;
+       
     }
     p{
         flex: 3;
@@ -25,3 +26,39 @@
     }
 }
 
+@media screen and (max-width: 500px) {
+    .featuredProducts{
+        margin: 21px 200px;
+
+    .top{
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 87px;
+    }
+
+    h1{
+        flex: 2 1;
+        position: absolute;
+        left: 12px;
+    }
+    p{
+        flex: 3;
+        color: gray;
+        display: none;
+    }
+    .bottom{
+       
+        flex-direction: column;
+        display: flex;
+        justify-content: center;
+        gap: 0px;
+        margin-left: -59px;
+
+    }
+}
+
+
+
+}

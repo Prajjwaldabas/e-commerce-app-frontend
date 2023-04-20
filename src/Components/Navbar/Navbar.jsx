@@ -32,8 +32,8 @@ export default function Navbar() {
        <KeyboardArrowDownIcon />
         </div>
 
-        <div className='item'>
-            <span>IND</span>
+        <div className='item Country'>
+            <span className='Country'>IND</span>
             <KeyboardArrowDownIcon />
         </div>
 
@@ -54,18 +54,18 @@ export default function Navbar() {
 
       
         <div className='Center'>
-        <Link  className='link' to="/">My Store</Link>
+        <Link  className='link' to="/">Store</Link>
         </div>  
 
       
 
     <div className='right'>
 
-      <div className='item'>
+      <div className='item' id='home'>
         <Link className='link' to="/">Home</Link>
         </div>  
 
-      <div className='item'>
+      <div className='item' id='about'>
         <Link className='link' to="/">About</Link>
         </div>  
 
@@ -78,11 +78,11 @@ export default function Navbar() {
         </div> 
 
       <div className='icons'>
-      <SearchOutlinedIcon/>
-      <PersonOutlineIcon/>
-      <FavoriteBorderOutlinedIcon/>
+      <SearchOutlinedIcon className='searchIcon'/>
+      <PersonOutlineIcon className='userIcon'/>
+      <FavoriteBorderOutlinedIcon  className='heart'/>
       <div className="cartIcon" onClick={()=>setOpen(!open)}>
-      <ShoppingCartOutlinedIcon/>
+      <ShoppingCartOutlinedIcon className='CartICON'/>
       <span>{products.length}</span>
       </div>
 
@@ -103,3 +103,4 @@ export default function Navbar() {
 // nav bar
   )
 }
+
