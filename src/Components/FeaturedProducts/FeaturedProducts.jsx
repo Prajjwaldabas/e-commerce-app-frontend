@@ -30,7 +30,9 @@ export default function FeaturedProducts({ type }) {
     <div className="featuredProducts">
     
       <div className="top">
+        <div className='featureHeading'>
         <h1>{type} Products</h1>
+        </div>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt
           repellendus optio, ipsa, corporis eligendi ratione dolore ducimus

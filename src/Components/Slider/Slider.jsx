@@ -11,7 +11,7 @@ const [currentSlide,setCurrentSlide]= useState(0);
     const data = [
 "https://images.pexels.com/photos/1154861/pexels-photo-1154861.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
 "https://images.pexels.com/photos/291762/pexels-photo-291762.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-"https://pps.whatsapp.net/v/t61.24694-24/342282431_619975339643450_2153051617652791745_n.jpg?ccb=11-4&oh=01_AdRrL7GEejrXWq81iTvckU3nCcTq2jVMxRcDBZ1cA0_7Ew&oe=644E61D5"
+"https://images.pexels.com/photos/242829/pexels-photo-242829.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
     ]
 
     const prevSlide=()=>{
