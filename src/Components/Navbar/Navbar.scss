@@ -22,13 +22,21 @@
         align-items: center;
         gap:25px;
     }
-    .center{
+    .Center{
         display: flex;
         align-items:center;
         gap: 25px;
+        color: #2879fe;
+        font: bold;
+        font-size: 15px;
         
-       
+        .link{
+            color: #2879fe;
+            font-weight: 700;
+            font-size: 25px;
+           }
     }
+
     .right{
         display: flex;
         align-items: center;
@@ -98,6 +106,13 @@
             width: 0px;
             position: absolute;
             right: 220px;
+
+            .link{
+                color: #2879fe;
+                font-weight: 700;
+
+                font-size: 25px;
+               }
               
            }
            .right{
