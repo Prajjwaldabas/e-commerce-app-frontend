@@ -118,7 +118,7 @@ export default function Card({item}) {
   </form>
 )}
 
-<div className="additems">
+{/* <div className="additems">
 
    <button className="addcart"  >
 <AddShoppingCartIcon/>
@@ -134,7 +134,7 @@ export default function Card({item}) {
        </button> 
        
 
-     </div>
+     </div> */}
 
 <Link className="link" to={`/product/${item._id}`} >
 <div className='card'>
