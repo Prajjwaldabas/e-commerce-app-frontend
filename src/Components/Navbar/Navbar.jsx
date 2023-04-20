@@ -16,6 +16,8 @@ export default function Navbar() {
  
     const [open,setOpen]=useState(false)
     const products = useSelector((state) => state.cart.products);
+  
+    // console.log(products); // this should log the products array from your state
   return (
     <div className='navbar'>
         
@@ -37,14 +39,14 @@ export default function Navbar() {
 
 
         <div className="item">
-            <Link className='link' to="/product/1"> Women</Link>
+            <Link className='link' to="/products/women"> Women</Link>
         </div>
 
         <div className="item">
-            <Link className='link' to="/product/2"> Men</Link>
+            <Link className='link' to="/products/men"> Men</Link>
         </div>
         <div className="item">
-            <Link className='link' to="/product/3"> Kids</Link>
+            <Link className='link' to="/products/kids"> Kids</Link>
         </div>
 
         </div>  

@@ -56,3 +56,65 @@
     }
  }
 }
+///////////////////////////////////////////////////////
+@media screen and (max-width: 400px) {
+    .navbar{
+        height:60px;
+        
+        .wrapper{
+           padding: 5px 15px;
+           display:flex;
+           justify-content: space-between;
+       
+           .items{
+               display: flex;
+               align-items: center;
+               font-size: 12px;
+           }
+           
+           .left{
+               display: flex;
+               align-items: center;
+               gap:15px;
+           }
+           .center{
+               display: flex;
+               align-items:center;
+               gap: 15px;
+               
+              
+           }
+           .right{
+               display: flex;
+               align-items: center;
+               gap:15px;
+           }
+           .icons{
+               display: flex;
+               gap: 5px;
+               color: #777;
+               cursor: pointer;
+       
+               .cartIcon{
+                   position: relative;
+                   span{
+                font-size: 8px;
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                background-color: #2879fe;
+                color:white;
+                position: absolute;
+                right: -10px;
+                top: -10px;
+                display: flex;
+                align-items: center;
+                justify-content:center ;
+                   }
+       
+               }
+           }
+        }
+       }
+  }
+  

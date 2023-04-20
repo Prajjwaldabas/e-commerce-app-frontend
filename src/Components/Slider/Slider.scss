@@ -38,7 +38,14 @@ img{
         justify-content: center;
         gap: 10px;
         cursor: pointer;
+        color: rgb(255, 255, 255);
+        font-weight: bold;
+        
 
+    }
+    .icon:hover{
+        background-color: #999;
+         color: white;
     }
 }
 

@@ -17,7 +17,7 @@ export default function Product() {
 
   const [Loading,setLoading] = useState(true)
   const id = useParams().id;
-  const [selectedImg, setSelectedImg] = useState("img");
+  const [selectedImg, setSelectedImg] = useState(0);
   const [quantity, setquantity] = useState(1);
 
   const dispatch = useDispatch();
@@ -33,6 +33,8 @@ export default function Product() {
   useEffect(() => {
     const fetchProduct = async () => {
       const result= fetch(`https://e-commerce-server-hhpk.onrender.com/items/product/${id}`)
+
+      
   .then(response => response.json())
   .then(data => {
     // handle the response data
@@ -63,20 +65,21 @@ export default function Product() {
       <div className="left">
       
         <div className="images">
-          <img src={product.imageUrl} alt="" onClick={(e) => setSelectedImg(0)} />
-          <img src={product.imageUrl} alt="" onClick={(e) => setSelectedImg(1)} />
+          <img src={product.imageUrl} alt="" onMouseOver={(e) => setSelectedImg(0)} />
+          <img src={product.secimageUrl} alt="" onMouseOver={(e) => setSelectedImg(1)} />
         </div>
-       
+       {console.log(product.secimageUrl)}
 
         <div className="mainImg">
-          <img src={product.imageUrl} alt="" />
+        <img src={selectedImg === 0 ? product.imageUrl : product.secimageUrl} alt="" />
+         
         </div>
       </div>
 
       <div className="right">
 
         <h1>{product.name}</h1>
-        <span className="price">{product.price}</span>
+        <span className="price">₹ {product.price}</span>
         <p>
          {product.description}
         </p>
@@ -113,8 +116,8 @@ export default function Product() {
 
 <div className="info">
     <span>Vendor:Polo</span>
-    <span>Product Type:T-Shirt</span>
-    <span>Tag: T-Shirt,Women,Top</span>
+    <span>Product Type:{product.subCategory}</span>
+    <span>Tag: T-Shirt,{product.category},Top</span>
 
 
 </div>

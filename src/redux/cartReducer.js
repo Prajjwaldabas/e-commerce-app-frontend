@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { v4 as uuidv4 } from 'uuid';
+
 const initialState = {
   products: [],
 };
@@ -13,12 +13,7 @@ export const cartSlice = createSlice({
       if (item) {
         item.quantity += action.payload.quantity;
       } else {
-        const cartItem = {
-            ...action.payload,
-            // key: uuidv4(), // add a unique key to the item
-          
-          };
-        state.products.push(cartItem);
+        state.products.push(action.payload);
       }
     },
     removeItem: (state,action) => {

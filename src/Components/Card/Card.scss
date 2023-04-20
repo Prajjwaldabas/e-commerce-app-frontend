@@ -16,7 +16,7 @@
     form{
         position: relative;
         z-index: 9999;
-        height: 393px;
+        height: 500px;
         top: 10px;
         left: 26%;
         border-radius: 10px;
@@ -154,9 +154,9 @@
             }
     
 
-        // .secondImg{
-        //     z-index:2;
-        // }
+        .secondImg{
+            z-index:2;
+        }
 
 
     
@@ -194,12 +194,233 @@
         font-size: 18px;
         font-weight: 500;
         &:first-child{
-           color: gray;
-           text-decoration: line-through; 
+           color: rgb(11, 11, 11);
+        //    text-decoration: line-through; 
         }
     }
     
 
 }
 }
+}
+
+@media screen and (max-width: 400px) {
+
+
+    .CardWrap{
+
+        position: relative;
+        left: -46px;
+    
+    
+    
+        &:hover{
+    
+            .additems{
+             z-index: 999;
+       
+            }
+        }
+    
+        form{
+            position: relative;
+            z-index: 9999;
+            height: 500px;
+            top: 10px;
+            left: -19%;
+            border-radius: 10px;
+            background-color: white;
+            margin-left: 11rem;
+            padding: 20px;
+            position: fixed;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            justify-content: center;
+            flex-direction: column;
+            border: 2px solid rgb(204, 204, 204);
+            width: 400px;
+            bottom: 35px;
+            box-shadow: 0 0 5px rgb(0 0 0 / 20%);
+            transition: all 1s ease;
+            
+            .cancel_btn{
+                position: absolute;
+                background-color: white;
+                font-size: 18px;
+                color: grey;
+                width: 15px;
+                top: 0px;
+                right: 10px;
+            }
+            .cancel_btn:hover{
+        background-color: white;
+        color: rgb(81, 81, 81);
+        
+            }
+            
+        
+        label{
+            margin-left:5px;
+            color: rgb(96, 96, 96);
+            
+        }
+        input:focus{
+            outline: none;
+        
+        }
+        
+        input{
+            width: 373px;
+            border-radius: 10px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+            
+            padding: 5px;
+            border: 2px solid rgb(201, 200, 200);
+        }
+        
+        button{
+        background-color: #2879fe;
+        color: white;
+        font-size: 16px;
+        font: 600;
+        border: none;
+        padding:10px;
+        cursor: pointer;
+        width: 120px;
+        
+        }
+        button:hover{
+            background-color: #1d70f5;
+        
+        }
+        
+        
+        
+        }
+        .additems{
+            position:absolute;
+            top: 30%;
+            left: 2%;
+            z-index: 1;
+            display: flex;
+            gap: 10px;
+            color: rgb(164, 161, 161);
+            align-items: center;
+            
+            justify-content: space-around;
+            width: 185px;
+            border-radius: 30px;
+            
+            
+            height: 50px;
+            // border: 1px solid rgb(198, 33, 33);
+    
+            button{
+                cursor: pointer;
+                height: 50px;
+                width: 50px;
+                display: flex;
+                align-items: center;justify-content:center;
+                border-radius: 50%;
+                font-size: 18px;
+                background-color: white;
+                border: none;
+            }
+            
+    
+           
+           button:hover{
+                
+                color: rgb(90, 90, 90);
+            }
+    
+        }
+    
+    .card{
+        width: 191px;
+        display: flex;
+        flex-direction: column;
+        gap: 0px;
+        margin-bottom: 30px;
+        margin-right: -91px;
+       
+    
+    .image{
+    
+        width: 100%;
+        height: 338px;
+        overflow: hidden;
+        position: relative;
+        
+    
+        
+    &:hover{
+    
+                .additems{
+                 z-index: 999;
+           
+                }
+        
+    
+            .secondImg{
+                z-index:2;
+            }
+    
+    
+        
+        }
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit:cover;
+            position: absolute;
+        }
+        .mainImg{
+           z-index:1; 
+        }
+        .newSeason{
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            background-color: white;
+            color: teal;
+            padding: 3px 5px;
+            z-index: 3;
+            font-weight: 500;
+            font-size: 12px; 
+        }
+    }
+        h2{
+            font-style: 16px;
+            font-weight: 400;
+        }
+        .desc{
+            margin-top: -30px;
+            color: grey;
+            font-size: 10px;
+
+
+        }
+        .prices{
+            display: flex;
+            
+        
+        h3{
+            margin-top: -10px;
+            font-size: 18px;
+            font-weight: 500;
+            &:first-child{
+               color: rgb(11, 11, 11);
+            //    text-decoration: line-through; 
+            }
+        }
+        
+    
+    }
+    }
+    }
+
+
+
 }

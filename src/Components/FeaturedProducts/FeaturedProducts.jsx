@@ -14,7 +14,7 @@ export default function FeaturedProducts({ type }) {
   useEffect(() => {
     async function fetchProducts() {
       const products = await getAllProducts();
-      console.log(products)
+      // console.log(products)
       setProducts(products);
       setLoading(false);
     }
@@ -42,7 +42,7 @@ export default function FeaturedProducts({ type }) {
 
         
 
-{products.slice(0,4).map(item=>(
+{products.slice(4,8).map(item=>(
  
   <Card item={item} key={item._id}/>
  
