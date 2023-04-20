@@ -1,6 +1,6 @@
 import React from 'react'
 import "./Footer.scss"
-
+import { Link } from 'react-router-dom'
 export default function Footer() {
   return (
     <div className='footer'>
@@ -8,11 +8,22 @@ export default function Footer() {
 <div className="top">
 <div className="item">
 <h1>Categories</h1>
-<span>Women</span>
-<span>Men</span>
-<span>Shoes</span>
-<span>Accessories</span>
-<span>New Arrivals</span>
+<div className="item">
+            <Link className='link' to="/products/women"> Women</Link>
+        </div>
+<div className="item">
+            <Link className='link' to="/products/men"> Men</Link>
+        </div>
+<div className="item">
+            <Link className='link' to="/products/kids">Kids</Link>
+        </div>
+<div className="item">
+            <Link className='link' to="/products/accessories"> Accessories</Link>
+        </div>
+<div className="item">
+            <Link className='link' to="/products/sale"> Sale</Link>
+        </div>
+
 </div>
 
 
