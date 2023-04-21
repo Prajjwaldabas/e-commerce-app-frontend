@@ -29,18 +29,18 @@ position: relative;
 
 .addNew{
     position: absolute;
-    background-color: #2879fe;
+    background-color: #0b0b0b;
     color: white;
     font-size: 16px;
     font: 600;
     border: none;
     padding: 10px;
     top: -101px;
-    left: -2%;
+    left: 0%;
     padding: 10px;
     cursor: pointer;
 
-   
+   z-index: 999999;
 
 }
 
@@ -48,7 +48,7 @@ form{
     position: relative;
     z-index: 9999;
     height: 500px;
-    top: 10px;
+    top: 112px;
     left: 26%;
     border-radius: 10px;
     background-color: white;
@@ -102,7 +102,7 @@ input{
 }
 
 button{
-background-color: #2879fe;
+background-color: #0b0b0b;
 color: white;
 font-size: 16px;
 font: 600;
@@ -113,7 +113,7 @@ width: 120px;
 
 }
 button:hover{
-    background-color: #1d70f5;
+    background-color: #333333;
 
 }
 
@@ -172,7 +172,8 @@ button:hover{
         
         .addNew{
             position: absolute;
-            background-color: #2879fe;
+            display: none;
+            background-color: #000000;
             color: white;
             font-size: 16px;
             font: 600;
@@ -244,7 +245,7 @@ button:hover{
         }
         
         button{
-        background-color: #2879fe;
+        background-color: #050505;
         color: white;
         font-size: 16px;
         font: 600;
@@ -255,7 +256,7 @@ button:hover{
         
         }
         button:hover{
-            background-color: #1d70f5;
+            background-color: #484849;
         
         }
         

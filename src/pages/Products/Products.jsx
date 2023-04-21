@@ -14,7 +14,7 @@ export default function Products() {
 
   const [isPopupOpen, setIsPopupOpen] = useState(false);
 
-  const [selectedPriceRange, setSelectedPriceRange] = useState({ min: 0, max: 1000 });
+  const [selectedPriceRange, setSelectedPriceRange] = useState({ min: 0, max: 20000 });
 
   const [sort,setSort]=useState(null)
   
@@ -97,6 +97,16 @@ export default function Products() {
       <label>Dress</label>
     </div>
   
+    <div className="inputItem">
+    <input type="checkbox" value="sunglasses" onChange={handleCheckboxChange} />
+      <label>Sunglasses</label>
+    </div>
+  
+    <div className="inputItem">
+    <input type="checkbox" value="perfumes" onChange={handleCheckboxChange} />
+      <label>Perfumes</label>
+    </div>
+  
   </div>
 
 
@@ -107,7 +117,7 @@ export default function Products() {
     <h2>Filter by price </h2>
     <div className="inputItem">
       <span>0</span>
-      <input type="range" min={0} max={1000} onChange={handlePriceRangeChange} />
+      <input type="range" min={0} max={20000} onChange={handlePriceRangeChange} />
       <span> {selectedPriceRange.max}</span>
     </div>
   </div>

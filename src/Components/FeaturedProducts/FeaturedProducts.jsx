@@ -36,6 +36,8 @@ export default function FeaturedProducts({ type }) {
         <p>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt
           repellendus optio, ipsa, corporis eligendi ratione dolore ducimus
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt
+          repellendus optio, ipsa, corporis eligendi ratione dolore ducimus
           
         </p>
       </div>

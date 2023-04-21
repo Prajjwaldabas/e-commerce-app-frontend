@@ -71,7 +71,7 @@
     }
     
     button{
-    background-color: #2879fe;
+    background-color: #000000;
     color: white;
     font-size: 16px;
     font: 600;
@@ -82,7 +82,7 @@
     
     }
     button:hover{
-        background-color: #1d70f5;
+        background-color: #3b3b3b;
     
     }
     
@@ -90,7 +90,7 @@
     
     }
     .additems{
-        display: none;
+        
         position:absolute;
         top: 30%;
         left: 5%;
@@ -109,7 +109,7 @@
         // border: 1px solid rgb(198, 33, 33);
 
         button{
-            display: none;
+           
             cursor: pointer;
             height: 50px;
             width: 50px;
@@ -124,7 +124,7 @@
 
        
        button:hover{
-            display: none;
+           
             color: rgb(90, 90, 90);
         }
 
@@ -151,7 +151,7 @@
 &:hover{
 
             .additems{
-             z-index: 999;
+             z-index: 9999;
        
             }
     
@@ -301,9 +301,9 @@
         
         }
         .additems{
-            display: none;
+           
             position:absolute;
-            top: 30%;
+            top: 40%;
             left: 2%;
             z-index: 1;
             display: flex;
@@ -321,11 +321,12 @@
     
             button{
                 cursor: pointer;
-                display: none;
+                
                 height: 50px;
                 width: 50px;
                 display: flex;
-                align-items: center;justify-content:center;
+                align-items: center;
+                justify-content:center;
                 border-radius: 50%;
                 font-size: 18px;
                 background-color: white;
@@ -335,8 +336,8 @@
     
            
            button:hover{
-           
-                color: rgb(90, 90, 90);
+            
+                color: rgb(231, 108, 108);
             }
     
         }
@@ -363,8 +364,8 @@
        
     
                 .additems{
-                 z-index: 999;
-                 display: none;
+                 z-index: 99999;
+               
            
                 }
         
