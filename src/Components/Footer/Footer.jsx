@@ -54,7 +54,7 @@ export default function Footer() {
 
 <div className="left">
     <span className='logo'>
-My Store
+Store
     </span>
 <span className="copyright">
 © 2023 All Rights Reserved 

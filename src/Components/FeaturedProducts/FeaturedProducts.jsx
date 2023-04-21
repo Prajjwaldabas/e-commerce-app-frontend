@@ -45,7 +45,7 @@ export default function FeaturedProducts({ type }) {
 
         
 
-{products.slice(4,8).map(item=>(
+{products.slice(37,41).map(item=>(
  
   <Card item={item} key={item._id}/>
  

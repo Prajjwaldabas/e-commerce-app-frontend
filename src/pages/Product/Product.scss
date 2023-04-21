@@ -40,7 +40,7 @@ object-fit: cover;
 
 .price{
     font-size: 30px;
-    color: #2879fe;
+    color: #161616;
     font-weight: 500;
 }
 p{
@@ -67,7 +67,7 @@ p{
 .add{
     width: 250px;
     padding: 10px;
-    background-color: #2879fe;
+    background-color: #070707;
     color: white;
     display: flex;
     align-items: center;
@@ -86,7 +86,7 @@ p{
         display: flex;
         align-items: center;
         gap: 10px;
-        color:#2879fe;
+        color:#0e0e0f;
         font-size: 14px;
 
     }
@@ -140,12 +140,11 @@ hr{
     
     
     img{
-       width: 100%;
-       height: 140px;
-       object-fit: cover; 
-       cursor: pointer;
-       margin-bottom: 10px;
-      
+        width: 200%;
+        height: 140px;
+        object-fit: cover;
+        cursor: pointer;
+        margin-bottom: 10px;
     }
     }
     .mainImg{
@@ -154,9 +153,9 @@ hr{
         margin-left: 43px;
     
     img{
-    width: 100%;
-    height: 294px;
-    object-fit: cover;
+        width: 100%;
+        height: 461px;
+        object-fit: cover;
     
     }
     }
@@ -166,10 +165,11 @@ hr{
         display: flex;
         flex-direction: column;
         gap: 20px;
+        margin-top: 133px;
     
     .price{
         font-size: 30px;
-        color: #2879fe;
+        color: #141414;
         font-weight: 500;
     }
     p{
@@ -196,7 +196,7 @@ hr{
     .add{
         width: 250px;
         padding: 10px;
-        background-color: #2879fe;
+        background-color: #060606;
         color: white;
         display: flex;
         align-items: center;
@@ -215,7 +215,7 @@ hr{
             display: flex;
             align-items: center;
             gap: 10px;
-            color:#2879fe;
+            color:#070707;
             font-size: 14px;
     
         }
