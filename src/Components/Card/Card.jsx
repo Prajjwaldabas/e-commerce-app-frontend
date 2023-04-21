@@ -144,14 +144,14 @@ export default function Card({item}) {
         { <img src={item.secimageUrl} alt="" className="secondImg" /> }
     </div>
 
-    <h2>{item.name}</h2>
-    <div className='desc'>
+    <h3>₹ {item.price}</h3>
+    {/* <div className='desc'>
     <h4>{item.description.split(' ').slice(0,4).join(' ')}</h4>
-    </div>
+    </div> */}
     <div className="prices">
-    
+    <h2>{item.name}</h2>
 
-        <h3>₹ {item.price}</h3>
+       
     </div>
 </div>
     </Link>

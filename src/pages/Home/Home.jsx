@@ -4,6 +4,7 @@ import Categories from '../../Components/Categories/Categories'
 import Contact from '../../Components/Contact/Contact'
 import FeaturedProducts from '../../Components/FeaturedProducts/FeaturedProducts'
 import Slider from "../../Components/Slider/Slider"
+import TrendingProducts from '../../Components/TrendingProducts/TrendingProducts'
 
 export default function Home() {
   return (
@@ -11,7 +12,7 @@ export default function Home() {
 <Slider/>
 <FeaturedProducts type="Featured"/>
 <Categories/>
-<FeaturedProducts type="Trending"/>
+<TrendingProducts />
 <Contact/>
     </div>
   )
