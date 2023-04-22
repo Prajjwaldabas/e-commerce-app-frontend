@@ -149,7 +149,7 @@ export default function Card({item}) {
     <h4>{item.description.split(' ').slice(0,4).join(' ')}</h4>
     </div> */}
     <div className="prices">
-    <h2>{item.name}</h2>
+    <h2>{item.name.toUpperCase()}</h2>
 
        
     </div>

@@ -4,11 +4,45 @@ import { useState} from "react"
 import { useParams } from "react-router-dom"
 import List from "../../Components/List/List"
 import ItemForm from '../../Components/ItemForm/ItemForm'
-
+import { useEffect } from 'react'
 
 
 
 export default function Products() {
+  
+  const { category } = useParams();
+if (typeof category !== 'undefined') {
+  console.log(category);
+}
+
+
+  const data = [
+    "https://g.foolcdn.com/image/?url=https%3A//g.foolcdn.com/editorial/images/669669/21_11_23-teens-with-shopping-bags-walking-on-a-street-_gettyimages-1092636334.jpg&w=2000&op=resize",
+    "https://www.kindpng.com/picc/m/331-3313607_happy-kids-children-activity-centers-my-maitland-children.png",
+    "https://wallpapers.com/images/featured-full/mens-fashion-pictures-adasabzf66m607uj.jpg",
+    'https://images.pexels.com/photos/322207/pexels-photo-322207.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+        ]
+
+     
+      
+      
+
+   useEffect(()=>{
+    if(category==='women'){
+      setImage(data[0])
+      }
+      else if(category==='men'){
+        setImage(data[2])
+      }
+      else if(category==='kids'){
+        setImage(data[1])
+      } 
+      else{
+        setImage(data[3])
+      }
+   })
+
+      const [Image,setImage]= useState(data[0])
 
   const [selectedSubcategories, setSelectedSubcategories] = useState([]);
 
@@ -138,13 +172,16 @@ export default function Products() {
 </div>
 <div className="right">
 <button onClick={handleTogglePopup} className="addNew">Add New Product +</button>
- 
+
 
 {isPopupOpen ? < ItemForm onClosePopup={handleTogglePopup}/> : null}
 
 
-  <img className="catImg" src="https://images.pexels.com/photos/1074535/pexels-photo-1074535.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
+<div className='CategoryImg'>
 
+<img className="catImg" src={Image} alt="" />
+</div>
+ 
   <List selectedSubcategories={selectedSubcategories}  selectedPriceRange={selectedPriceRange} sort={sort} />
 </div>
 
