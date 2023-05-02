@@ -12,7 +12,7 @@ import { useDispatch } from "react-redux";
 import {updateProductAsync} from '../../redux/allProductsReducer'
 import Loader from '../Loader/Loader'
 
-
+import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined';
 
 
 export default function Card({item}) {
@@ -121,7 +121,7 @@ export default function Card({item}) {
 <div className="additems">
 
    <button className="addcart"  >
-<AddShoppingCartIcon/>
+<FavoriteBorderOutlinedIcon/>
        </button>
 
        <button className="edititem" onClick={(event) => setSelectedItem(item,event)}
